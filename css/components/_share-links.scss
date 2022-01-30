@@ -10,6 +10,8 @@
     position: relative;
     @include breakpoint(max, 1023px) {
         position: static;
+        justify-self: end;
+        align-self: end;
     }
 }
 .share__btn {
@@ -20,11 +22,6 @@
     cursor: pointer;
     @include b-radius(50%, 50%, 50%, 50%);
     @include transition(0.2s);
-    @include breakpoint(max, 1023px) {
-        position: absolute;
-        top: 85%;
-        right: 12%;
-    }
     path {
         transition: 0.2s;
         -webkit-transition: 0.2s;
@@ -81,7 +78,10 @@
         top: 80%;
         height: 20%;
         max-height: 10rem;
-        padding-right: 7.5rem;
+        padding: {
+            right: 7.5rem;
+            bottom: rem(19px);
+        };
         @include b-radius(0, 0, 1rem, 1rem);
         &::after {
             content: none;
