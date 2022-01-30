@@ -1,0 +1,117 @@
+.article__share {
+    grid-area: share;
+}
+
+.share {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @include breakpoint(max, 1023px) {
+        position: static;
+    }
+}
+.share__btn {
+    background: hsla(214, 17%, 51%, 0.2);
+    padding: rem(10px);
+    height: rem(35px);
+    width: rem(35px);
+    cursor: pointer;
+    @include b-radius(50%, 50%, 50%, 50%);
+    @include transition(0.2s);
+    @include breakpoint(max, 1023px) {
+        position: absolute;
+        top: 85%;
+        right: 12%;
+    }
+    path {
+        transition: 0.2s;
+        -webkit-transition: 0.2s;
+        -moz-transition: 0.2s;
+        -ms-transition: 0.2s;
+        -o-transition: 0.2s;
+    }
+    
+}
+.share {
+    @include breakpoint(min, 1024px) {
+        &:hover {
+            .share__btn {
+                background-color: $secondary-desaturated-blue;
+            }
+            path {
+                fill: #fff;
+            }
+            .share__links {
+                visibility: visible;
+                opacity: 1;
+                top: rem(-70px);
+            }
+        }
+    }
+}
+
+.share__links {
+    width: 22rem;
+    height: 4.5rem;
+    padding: 1rem 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: rem(-60px);
+    left: rem(-128px);
+    background-color: $primary-grayish-blue;
+    visibility: hidden;
+    opacity: 0;
+    @include transition(0.4s 0.2s);
+    @include b-radius(1rem, 1rem, 1rem, 1rem);
+    &::after {
+        content: "\25BC";
+        position: absolute;
+        color: hsl(217, 19%, 35%);
+        font-size: 20px;
+        top: rem(51px);
+        left: rem(134px);
+    }
+    @include breakpoint(max, 1023px) {
+        width: 100%;
+        left: 0;
+        top: 80%;
+        height: 20%;
+        max-height: 10rem;
+        padding-right: 7.5rem;
+        @include b-radius(0, 0, 1rem, 1rem);
+        &::after {
+            content: none;
+        }
+    }
+    a {
+        display: inline-flex;
+    }
+}
+
+.share__links--opened {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+}
+
+.share__span {
+    text-transform: uppercase;
+    color: hsla(212, 23%, 69%, 0.7);
+    letter-spacing: rem(4px);
+}
+
+.share__icon {
+    height: 1.5rem;
+    aspect-ratio: 1;
+}
+.share__btn--over {
+    background-color: $secondary-desaturated-blue;
+    z-index: 2;
+    path {
+        fill: #fff;
+    }
+}

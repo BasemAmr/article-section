@@ -1,0 +1,14 @@
+.card {
+    width: 80%;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include b-radius(1rem, 1rem, 1rem, 1rem);
+    @include breakpoint(max, 1023px) {
+        width: 90%;
+        height: 60rem;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+}

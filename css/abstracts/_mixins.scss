@@ -1,0 +1,21 @@
+@mixin b-radius($top, $right, $bottom, $left) {
+    border-radius: $top $right $bottom $left;
+    -webkit-border-radius: $top $right $bottom $left;
+    -moz-border-radius: $top $right $bottom $left;
+    -ms-border-radius: $top $right $bottom $left;
+    -o-border-radius: $top $right $bottom $left;
+}
+
+@mixin transition($time) {
+    transition: $time;
+    -webkit-transition: $time;
+    -moz-transition: $time;
+    -ms-transition: $time;
+    -o-transition: $time;
+}
+
+@mixin breakpoint($min-or-max, $width) {
+    @media (#{$min-or-max}-width: $width) {
+        @content;
+    } 
+}

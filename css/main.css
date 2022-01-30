@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+:root {
+  font-size: 81.25%; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: #ecf2f8; }
+
+.article__heading, .writter__name {
+  color: #48556a;
+  font-weight: 700; }
+
+.article__paragraph {
+  color: #6d7f97; }
+
+.article__date {
+  color: #9eafc2; }
+
+.container {
+  width: 80%;
+  margin: 5% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media (max-width: 1023px) {
+    .container {
+      width: 100%; } }
+
+.card {
+  width: 80%;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem 1rem 1rem 1rem;
+  -webkit-border-radius: 1rem 1rem 1rem 1rem;
+  -moz-border-radius: 1rem 1rem 1rem 1rem;
+  -ms-border-radius: 1rem 1rem 1rem 1rem;
+  -o-border-radius: 1rem 1rem 1rem 1rem; }
+  @media (max-width: 1023px) {
+    .card {
+      width: 90%;
+      height: 60rem;
+      margin: 0 auto;
+      flex-direction: column; } }
+
+.card__drawer {
+  width: 20rem;
+  height: 50%;
+  background: 0% center/23rem 100% url(../images/drawers.jpg) no-repeat;
+  border-radius: 1rem 0 0 1rem;
+  -webkit-border-radius: 1rem 0 0 1rem;
+  -moz-border-radius: 1rem 0 0 1rem;
+  -ms-border-radius: 1rem 0 0 1rem;
+  -o-border-radius: 1rem 0 0 1rem; }
+  @media (max-width: 1023px) {
+    .card__drawer {
+      width: 100%;
+      height: 20rem;
+      border-radius: 1rem 1rem 0 0;
+      -webkit-border-radius: 1rem 1rem 0 0;
+      -moz-border-radius: 1rem 1rem 0 0;
+      -ms-border-radius: 1rem 1rem 0 0;
+      -o-border-radius: 1rem 1rem 0 0;
+      background: center/120% url(../images/drawers.jpg) no-repeat; } }
+
+.article {
+  height: 50%;
+  width: 35rem;
+  padding: 1rem 2rem;
+  display: grid;
+  grid-template-areas: "heading heading" "paragraph paragraph" "writter share";
+  gap: 0.7692307692rem;
+  background-color: #fff;
+  border-radius: 0 1rem 1rem 0;
+  -webkit-border-radius: 0 1rem 1rem 0;
+  -moz-border-radius: 0 1rem 1rem 0;
+  -ms-border-radius: 0 1rem 1rem 0;
+  -o-border-radius: 0 1rem 1rem 0; }
+  @media (max-width: 1023px) {
+    .article {
+      width: 100%;
+      padding: 2rem 2rem 1rem 2rem;
+      border-radius: 0 0 1rem 1rem;
+      -webkit-border-radius: 0 0 1rem 1rem;
+      -moz-border-radius: 0 0 1rem 1rem;
+      -ms-border-radius: 0 0 1rem 1rem;
+      -o-border-radius: 0 0 1rem 1rem;
+      position: relative; } }
+
+.article__heading {
+  grid-area: heading; }
+
+.article__paragraph {
+  grid-area: paragraph;
+  max-width: 27rem; }
+
+@media (max-width: 1023px) {
+  .article__heading, .article__paragraph {
+    width: 85%;
+    margin: 0 auto; } }
+.writter {
+  max-width: 15rem;
+  grid-area: writter;
+  display: grid;
+  grid-template-areas: "avatar name" "avatar artcl-date";
+  column-gap: 1rem; }
+
+.writter__avatar {
+  grid-area: avatar;
+  align-self: center;
+  justify-self: end;
+  width: 3.5rem;
+  border-radius: 50% 50% 50% 50%;
+  -webkit-border-radius: 50% 50% 50% 50%;
+  -moz-border-radius: 50% 50% 50% 50%;
+  -ms-border-radius: 50% 50% 50% 50%;
+  -o-border-radius: 50% 50% 50% 50%; }
+  @media (max-width: 1023px) {
+    .writter__avatar {
+      width: 2.5rem; } }
+
+.writter__name {
+  grid-area: name;
+  align-self: end; }
+
+.article__date {
+  grid-area: artcl-date; }
+
+.article__share {
+  grid-area: share; }
+
+.share {
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  @media (max-width: 1023px) {
+    .share {
+      position: static; } }
+
+.share__btn {
+  background: rgba(109, 127, 151, 0.2);
+  padding: 0.7692307692rem;
+  height: 2.6923076923rem;
+  width: 2.6923076923rem;
+  cursor: pointer;
+  border-radius: 50% 50% 50% 50%;
+  -webkit-border-radius: 50% 50% 50% 50%;
+  -moz-border-radius: 50% 50% 50% 50%;
+  -ms-border-radius: 50% 50% 50% 50%;
+  -o-border-radius: 50% 50% 50% 50%;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s; }
+  @media (max-width: 1023px) {
+    .share__btn {
+      position: absolute;
+      top: 85%;
+      right: 12%; } }
+  .share__btn path {
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s; }
+
+@media (min-width: 1024px) {
+  .share:hover .share__btn {
+    background-color: #6d7f97; }
+  .share:hover path {
+    fill: #fff; }
+  .share:hover .share__links {
+    visibility: visible;
+    opacity: 1;
+    top: -5.3846153846rem; } }
+
+.share__links {
+  width: 22rem;
+  height: 4.5rem;
+  padding: 1rem 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  top: -4.6153846154rem;
+  left: -9.8461538462rem;
+  background-color: #48556a;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s 0.2s;
+  -webkit-transition: 0.4s 0.2s;
+  -moz-transition: 0.4s 0.2s;
+  -ms-transition: 0.4s 0.2s;
+  -o-transition: 0.4s 0.2s;
+  border-radius: 1rem 1rem 1rem 1rem;
+  -webkit-border-radius: 1rem 1rem 1rem 1rem;
+  -moz-border-radius: 1rem 1rem 1rem 1rem;
+  -ms-border-radius: 1rem 1rem 1rem 1rem;
+  -o-border-radius: 1rem 1rem 1rem 1rem; }
+  .share__links::after {
+    content: "\25BC";
+    position: absolute;
+    color: #48556a;
+    font-size: 20px;
+    top: 3.9230769231rem;
+    left: 10.3076923077rem; }
+  @media (max-width: 1023px) {
+    .share__links {
+      width: 100%;
+      left: 0;
+      top: 80%;
+      height: 20%;
+      max-height: 10rem;
+      padding-right: 7.5rem;
+      border-radius: 0 0 1rem 1rem;
+      -webkit-border-radius: 0 0 1rem 1rem;
+      -moz-border-radius: 0 0 1rem 1rem;
+      -ms-border-radius: 0 0 1rem 1rem;
+      -o-border-radius: 0 0 1rem 1rem; }
+      .share__links::after {
+        content: none; } }
+  .share__links a {
+    display: inline-flex; }
+
+.share__links--opened {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1; }
+
+.share__span {
+  text-transform: uppercase;
+  color: rgba(158, 175, 194, 0.7);
+  letter-spacing: 0.3076923077rem; }
+
+.share__icon {
+  height: 1.5rem;
+  aspect-ratio: 1; }
+
+.share__btn--over {
+  background-color: #6d7f97;
+  z-index: 2; }
+  .share__btn--over path {
+    fill: #fff; }
+
+/*# sourceMappingURL=main.css.map */

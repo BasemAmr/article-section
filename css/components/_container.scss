@@ -1,0 +1,10 @@
+.container {
+    width: 80%;
+    margin: 5% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint(max, 1023px) {
+        width: 100%;
+    }
+}
