@@ -103,7 +103,8 @@ body {
 @media (max-width: 1023px) {
   .article__heading, .article__paragraph {
     width: 85%;
-    margin: 0 auto; } }
+    margin: 0 auto;
+    text-align: center; } }
 .writter {
   max-width: 15rem;
   grid-area: writter;
@@ -250,5 +251,24 @@ body {
   z-index: 2; }
   .share__btn--over path {
     fill: #fff; }
+
+.footer {
+  width: 100%;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000000b5;
+  color: #fff;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  font-size: 14px; }
+  .footer a {
+    color: #ecf2f8;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: lighter;
+    text-decoration: none; }
 
 /*# sourceMappingURL=main.css.map */
