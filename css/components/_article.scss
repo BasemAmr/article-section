@@ -41,8 +41,12 @@
     grid-template-areas: "avatar name"
                          "avatar artcl-date";
     column-gap: 1rem;
-    justify-self: end;
-    align-self: end;
+    justify-self: start;
+    align-self: center;
+    @include breakpoint(max, 1023px) {
+        justify-self: end;
+        align-self: end;
+    }
 }
 
 .writter__avatar {

@@ -112,8 +112,12 @@ body {
   display: grid;
   grid-template-areas: "avatar name" "avatar artcl-date";
   column-gap: 1rem;
-  justify-self: end;
-  align-self: end; }
+  justify-self: start;
+  align-self: center; }
+  @media (max-width: 1023px) {
+    .writter {
+      justify-self: end;
+      align-self: end; } }
 
 .writter__avatar {
   grid-area: avatar;
@@ -264,7 +268,7 @@ body {
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 600;
-  font-size: 14px; }
+  font-size: 13px; }
   .footer a {
     color: #ecf2f8;
     text-transform: uppercase;
